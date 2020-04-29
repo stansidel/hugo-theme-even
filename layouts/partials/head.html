@@ -93,5 +93,8 @@
 {{/* Facebook Page ID */}}
 {{- with .Site.Social.facebook_app_id }}<meta property="fb:app_id" content="{{ . }}" />{{ end }}
 
-{{/* Twitter image alt */}}
-{{- with $.Params.twitter_image_alt }}<meta name="twitter:image:alt" content="{{ . }}" />{{ end -}}
+{{/* Twitter ang OG image alt */}}
+{{- with $.Params.image_alt }}
+<meta name="og:image:alt" content="{{ . }}" />
+<meta name="twitter:image:alt" content="{{ . }}" />
+{{ end }}
